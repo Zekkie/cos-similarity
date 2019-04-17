@@ -33,7 +33,7 @@ mongo.connect(url,(err,client) => {
 	collection.find({}).toArray((e,items) => {
 		if(e) throw e;
 		
-		items.splice(400,items.length-400);
+		items.splice(200,items.length-200);
 
 		computerManager.send(items);
 		computerManager.working = true;
