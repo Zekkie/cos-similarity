@@ -44,7 +44,7 @@
 
 		const ctx = canvas.getContext("2d")
 
-		xhr.open("get","http://localhost:9000/matrix",true);
+		xhr.open("get",window.origin+"/matrix",true);
 
 		xhr.send();
 		xhr.onload = function(d) {
