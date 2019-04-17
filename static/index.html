@@ -53,7 +53,14 @@
 			for(let i = 0; i < arr.length; i++) {
 				for(let j = 0; j < arr[i].length; j++) {
 						ctx.globalAlpha = arr[i][j];
-						
+						if(arr[i][j] < 0.1) {
+
+							ctx.globalAlpha = 0;
+						}else if(arr[i][j] > 0.2) {
+							ctx.globalAlpha = 1;
+						}else if(arr[i][j] >= 1) {
+							ctx.globalAlpha = 0;
+						}
 						ctx.fillRect(i*4,j*4,4,4);
 					}
 					
